@@ -70,22 +70,32 @@ disini penulis akan menjelaskan informasi data dari setiap variabel dalam datase
 - **`movie.csv : `**  9125 entries dan 3 kolom.
 - **`rating.csv :`** 1000004 entries dan 3 kolom.
 - **`tag.csv :`** 1296 entries dan 4 kolom.
-- **link.csv :`** 9125 entries dan 3 kolom.
+- **`link.csv :`** 9125 entries dan 3 kolom.
 #### 3. Penjelasan setiap variabel 
-**A. movie.csv**<br>
+**A. movie.csv<br>**
 - `movieId` memiliki jumlah Non-Null sebanyak 9125 entries dan type data ``int``.
 - `title` memiliki jumlah Non-Null sebanyak 9125 entries dan type data ``object``.
-- `genres` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data ``object``.
-**B. rating.csv**<br>
+- `genres` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data ``object``.<br>
+**B. rating.csv<br>**
 - `userId` memiliki sejumlah Non-Null sebanyak 100004 entries dan type data ``int``.
 - `movieId` memiliki sejumlah Non-Null sebanyak 100004 entries dan typedata ``int``.
-- `timpestamp` memiliki sejumlah Non-Null sebanyak 100004 entries dan typedata `int`.
-**C. tag.csv** <br>
+- `timpestamp` memiliki sejumlah Non-Null sebanyak 100004 entries dan typedata `int`.<br>
+**C. tag.csv<br>**
 - `userId` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data ``int``.
 - `movieId` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data ``int``.
 - `tag` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data ``object``.
-- `timestamp` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data `int`.
-**D
+- `timestamp` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data `int`.<br>
+**D. link.csv<br>**
+- `movieId` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data `int`.
+- `imdbId` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data `int`.
+- `tmdbId` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data `float`<br>
+
+#### Ringkasan statistik data
+**A. movie.csv<br>**
+Beberapa insight pada variabel `movie`, diantaranya :<br>
+- Jumlah data yang dimiliki pada variabel `movie` ialah 9125 data, rata-rata data ialah 31123 data, standar deviasi ialah 40782 data.
+- dari yang penulis ketahui dari kolom `title` bahwa judul film yang sering muncul 2 kali ialah `Halmet (2000)` dan dari kolom `genre` yang banyak diminati pengguna ialah `drama`.
+**B. rating.csv<br>**
 
 ## Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
