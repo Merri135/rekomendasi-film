@@ -55,17 +55,37 @@ Langkah-langkahnya ialah :
 - Memberikan hasil rekomendasi berdasarkan pola rating dari pengguna yang serupa.
 
 ## Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai jumlah data, kondisi data, dan informasi mengenai data yang digunakan. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
+Pada tahap ini,penulis akan menjelaskan informasi mengenai jumlah data, kondisi data, dan informasi mengenai data yang digunakan untuk analisis data sampa evaluasi model pada dataset yang kita analisis lebih lanjut.saya mengambil dataset dari platform **kaggle** yaitu dataset **MovieLens**
 
-Selanjutnya, uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
-
-Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
+berikut link datasetnya : https://www.kaggle.com/datasets/snehal1409/movielens <br>
+#### 1. Jumlah Variabel pada Dataset MovieLens 
+Dataset ini terdiri 5 file yaitu :
+- `rating.csv` : Berisi jumlah data rating yang diberikan pengguna pada film yang diminat/disukai oleh pengguna.
+- `movie.csv` : berisi sejumlah data film/movie yang diminati pengguna sesuai genre yang pengguna sukai.
+- `tag.csv` : berisi sejumlah tag pada film yang pengguna gemari.
+- `link.csv` : berisi sejumlah link yang direkomendasikan pengguna ke pengguna lain sesuai minat gemar pengguna.
+- `ReadMe.txt` : berisi informasi dataset `MovieLens`
+#### 2. Informasi data setiap variabel
+disini penulis akan menjelaskan informasi data dari setiap variabel dalam dataset `MovieLens` yaitu :
+- **`movie.csv : `**  9125 entries dan 3 kolom.
+- **`rating.csv :`** 1000004 entries dan 3 kolom.
+- **`tag.csv :`** 1296 entries dan 4 kolom.
+- **link.csv :`** 9125 entries dan 3 kolom.
+#### 3. Penjelasan setiap variabel 
+**A. movie.csv**<br>
+- `movieId` memiliki jumlah Non-Null sebanyak 9125 entries dan type data ``int``.
+- `title` memiliki jumlah Non-Null sebanyak 9125 entries dan type data ``object``.
+- `genres` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data ``object``.
+**B. rating.csv**<br>
+- `userId` memiliki sejumlah Non-Null sebanyak 100004 entries dan type data ``int``.
+- `movieId` memiliki sejumlah Non-Null sebanyak 100004 entries dan typedata ``int``.
+- `timpestamp` memiliki sejumlah Non-Null sebanyak 100004 entries dan typedata `int`.
+**C. tag.csv** <br>
+- `userId` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data ``int``.
+- `movieId` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data ``int``.
+- `tag` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data ``object``.
+- `timestamp` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data `int`.
+**D
 
 ## Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
