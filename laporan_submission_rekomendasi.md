@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Nama Anda
+# Laporan Proyek Machine Learning - Merri Putri Panggabean
 
 ## Project Overview
 
@@ -76,15 +76,18 @@ disini penulis akan menjelaskan informasi data dari setiap variabel dalam datase
 - `movieId` memiliki jumlah Non-Null sebanyak 9125 entries dan type data ``int``.
 - `title` memiliki jumlah Non-Null sebanyak 9125 entries dan type data ``object``.
 - `genres` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data ``object``.<br>
+
 **B. rating.csv<br>**
 - `userId` memiliki sejumlah Non-Null sebanyak 100004 entries dan type data ``int``.
 - `movieId` memiliki sejumlah Non-Null sebanyak 100004 entries dan typedata ``int``.
 - `timpestamp` memiliki sejumlah Non-Null sebanyak 100004 entries dan typedata `int`.<br>
+
 **C. tag.csv<br>**
 - `userId` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data ``int``.
 - `movieId` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data ``int``.
 - `tag` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data ``object``.
 - `timestamp` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data `int`.<br>
+
 **D. link.csv<br>**
 - `movieId` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data `int`.
 - `imdbId` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data `int`.
