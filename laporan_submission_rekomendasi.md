@@ -76,50 +76,76 @@ disini penulis akan menjelaskan informasi data dari setiap variabel dalam datase
 - `movieId` memiliki jumlah Non-Null sebanyak 9125 entries dan type data ``int``.
 - `title` memiliki jumlah Non-Null sebanyak 9125 entries dan type data ``object``.
 - `genres` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data ``object``.<br>
+berikut gambar hasil informasi variabel movie<br>
+![alt text](./asset/movieinfo.png)<br>
+Gambar 1. Informasi data variabel movie<br>
 
 **B. rating.csv<br>**
 - `userId` memiliki sejumlah Non-Null sebanyak 100004 entries dan type data ``int``.
 - `movieId` memiliki sejumlah Non-Null sebanyak 100004 entries dan typedata ``int``.
 - `timpestamp` memiliki sejumlah Non-Null sebanyak 100004 entries dan typedata `int`.<br>
+berikut gambar hasil informasi variabel rating<br>
+![alt text](.asset/ratinginfo.png)<br>
+Gambar 2. Informasi data variabel rating<br>
 
 **C. tag.csv<br>**
 - `userId` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data ``int``.
 - `movieId` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data ``int``.
 - `tag` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data ``object``.
 - `timestamp` memiliki sejumlah Non-Null sebanyak 1296 entries dan type data `int`.<br>
+berikut gambar hasil informasi variabel tag<br>
+![alt text](./asset/taginfo.png)<br>
+Gambar 3. Informasi data variabel tag<br>
 
 **D. link.csv<br>**
 - `movieId` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data `int`.
 - `imdbId` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data `int`.
 - `tmdbId` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data `float`<br>
+berikut gambar hasil informasi variabel link<br>
+![alt text](./asset/linkinfo.png)<br>
+Gambar 4. Informasi data variabel link<br>
 
 #### 4. Ringkasan statistik data
 **A. movie.csv<br>**
 Beberapa insight pada variabel `movie`, diantaranya :<br>
 - Jumlah data yang dimiliki pada variabel `movie` ialah 9125 data, rata-rata data ialah 31123 data, standar deviasi ialah 40782 data.
 - dari yang penulis ketahui dari kolom `title` bahwa judul film yang sering muncul 2 kali ialah `Halmet (2000)` dan dari kolom `genre` yang banyak diminati pengguna ialah `drama`.<br>
+berikut gambar hasil dari data statistik variabel movie<br>
+![alt text](./asset/moviedescribe.png)<br>
+Gambar 5. Data statistik variabel movie<br>
 
 **B. rating.csv<br>**
 beberapa insight pada variabel `rating` diantaranya :<br>
 - Dataset berisi 100.004 rating dari berbagai user dan film, dengan distribusi waktu yang panjang (1990-an sampai 2016).
 - Rating cenderung tinggi, menunjukkan potensi bias positif dari pengguna.
 - pada variabel `rating` kolom `movieId` mengalami duplikat data yang akan di bersihkan pada tahap selanjutnya.<br>
+berikut gambar hasil dari data statistik variabel rating<br>
+![alt text](./asset/ratingdescribe.png)<br>
+Gambar 6. Data statistik variabel rating<br>
 
 **C. tag.csv<br>**
 beberapa insight pada variabel `tag` diantaranya :<br>
 - dataset pada variabel `tag` memiliki data sebanyak 1296 entries dari pengguna dan film.
 - interaksi yang didapat bahwa film didominasi oleh film-film dengan userId yang relatif rendah dengan sejumlah kecil interaksi terjadi pada film-film dengan userId yang sangat tinggi.
 - mayoritas interaksi didominasi dengan rentang waktu dari pertengahan tahun 2012 sampai tahun 2016.<br>
+berikut gambar hasil data statistik variabel tag<br>
+![alt text](./asset/tagdescribe.png)<br>
+Gambar 7. Data statistik variabel tag<br>
 
 **D. link.csv<br>**
 beberapa insight yang didapat dari variabel `link` diantaranya :<br>
 - terdapat rentang nilai yang sangat lebar, ditunjukkan perbedaan besar antara nilai `min` dan `max` serta `std` yang signifikan. Hal ini mengindikasikan bahwa dataset mencakup film-film dengan ID yang beragam dalam masing-masing sistem.<br>
+berikut gambar hasil data statistik varaibel link<br>
+![alt text](./asset/linkdescribe.png)<br>
+Gambar 8. Data statistik variabel link<br>
 
 #### 5. Informasi kondisi data
 **A. Variabel movie<br>**
 - Pada variabel movie tidak memiliki missing value dan semua data pada `movie` memiliki **data bersih<br>**.
+- 
 **B. Variabel rating<br>**
 - semua data dalam variabel `rating` tidak memiliki missing value dan user yang memberikan rating pada film cenderung tidak berstruktur dimana adanya user memberikan rating 1 sampai 4 pada film.<br>
+
 **C. Variabel tag<br>**
 - semua data pada variabel `tag` tidak memiliki memiliki missing value.<br>
 **D. Variabel link<br>**
