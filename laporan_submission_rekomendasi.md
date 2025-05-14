@@ -141,7 +141,7 @@ Gambar 8. Data statistik variabel link<br>
 
 #### 5. Informasi kondisi data
 **A. Variabel movie<br>**
-- Pada variabel movie tidak memiliki missing value dan semua data pada `movie` memiliki **data bersih<br>**.
+- Pada variabel movie tidak memiliki missing value dan semua data pada `movie` memiliki **data bersih.<br>**
   
 **B. Variabel rating<br>**
 - semua data dalam variabel `rating` tidak memiliki missing value dan user yang memberikan rating pada film cenderung tidak berstruktur dimana adanya user memberikan rating 1 sampai 4 pada film.<br>
@@ -151,7 +151,49 @@ Gambar 8. Data statistik variabel link<br>
 
 **D. Variabel link<br>**
 - pada semua data dalam variabel `link` tidak memiliki missing value.<br>
-  
+
+#### 6. Cek duplikat data
+Pada tahap ini, penulis perlu untuk mengecek apakah setiap variabel memiliki data duplikat, dari pengujian yang penulis lakukan, bahwa **semua variabel tidak memiliki duplikat data<br>**.
+
+### Exploratory Data Analysis (EDA)
+**Distribusi Rating<br>**
+![alt text](./asset/rating.png)<br>
+Gambar 9. Distribusi Visualisasi Rating<br>
+Pada hasil Visualisasi yang didapat bahwa distribusi condong kekanan (positif), mayoritas pengguna memberikan rating 3-5, tetapi rating terbanyak ialah rating 4 sebanyak 30.000 rating sedangkan rating 1 dan 2 memiliki jumlah yang sangat kecil dimana sedikit pengguna yang tidak menyukai film.<br>
+
+**Distribusi Genre<br>**
+![alt text](./asset/genre.png)<br>
+Gambar 10. Distribusi Visualisasi Genre<br>
+Pada hasil visualisasi yang diketahui bahwa genre drama yang paling banyak mencapai 4000 film diikuti oleh genre Comedy sebanyak 3000 film. sedangkan genre yang paling sedikit diminati ialah Horror, Sci-Fi,dan Fantasy sebanyak 1000 film.<br>
+
+**Distribusi Film Terbaik<br>**
+![alt text](./asset/list.png)<br>
+Gambar 11. Visualisasi list film terbaik.<br>
+Pada hasil visualisasi yang didapat bahwa  ``film GodFather, The (1972)`` ialah film **terbaik dengan rating 4.487** yang diberikan pengguna dibanding dengan film yang lainnya. seperti **film Dark Knight, The (2008)** memiliki rating terendah sebanyak 4,23. setelah mendapatkan hasilnya berupa list. maka penulis menampilkan visualisasi film terbaik berdasarkan bar char, berikut hasil visualisasinya.<br>
+![alt text](./asset/fim.png)<br>
+Gambar 12. Visualisasi film terbaik.<br>
+
+### Data Processing 
+Pada tahap ini, penulis melakukan Processing dari semua dataset yang telah penulis lakukan sebelumnya di data understanding, sekarang penulis perlu untuk melakukan penggabungan dataset yang akan dianalisis lebih lanjut ke model yang akan penulis latih. langkah - langkah yang dilakukan penulis ialah :<br>
+- menggabungkan semua data movieId
+- menggabungkan semua data userId
+- menyimpan ke dataframe baru.
+
+**Menggabungkan semua data movieId<br>**
+  Pada tahap ini, penulis melakukan penggabungan data terhadap data unik `movieId` dari semua variabel-varibel yang memiliki hubungan satu sama lain, setelah melakukan penggabungan data unik, penulis menampilkan banyak jumlah data unik `movieId`. berikut jumlah data unik `movieId`<br>
+![alt text](./asset/lost.png)<br>
+Gambar 13. Hasil jumlah data `movieId`.<br>
+
+**Menggabungkan semua data userId<br>**
+Pada tahap ini, penulis melakukan penggabungan data terhadap data unik `userId` dari semua variabel-variabel yang memiliki hubungan satu sama lain, setelah melakukan penggabungan data unik, penulis menampilkan hasil jumlah dari penggabungan yang penulis buat, berikut hasilnya<br>
+![alt text](./asset/unik.png)<br>
+Gambar 14. Hasil jumlah data `userId`<br>
+
+**Menyimpan ke dataframe baru<br>**
+setelah melakukan penggabungan data unik sebelumnya, maka penulis perlu untuk menyimpan semua penggabungan data unik kedalam dataframe baru yaitu `all_movie_name`, seperti gambar berikut<br>
+![alt text](./asset/user.png)<br>
+Gambar 15. penggabungan kedua variabel<br> 
+
 ## Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
 
