@@ -93,13 +93,38 @@ disini penulis akan menjelaskan informasi data dari setiap variabel dalam datase
 - `imdbId` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data `int`.
 - `tmdbId` memiliki sejumlah Non-Null sebanyak 9125 entries dan type data `float`<br>
 
-#### Ringkasan statistik data
+#### 4. Ringkasan statistik data
 **A. movie.csv<br>**
 Beberapa insight pada variabel `movie`, diantaranya :<br>
 - Jumlah data yang dimiliki pada variabel `movie` ialah 9125 data, rata-rata data ialah 31123 data, standar deviasi ialah 40782 data.
-- dari yang penulis ketahui dari kolom `title` bahwa judul film yang sering muncul 2 kali ialah `Halmet (2000)` dan dari kolom `genre` yang banyak diminati pengguna ialah `drama`.
-**B. rating.csv<br>**
+- dari yang penulis ketahui dari kolom `title` bahwa judul film yang sering muncul 2 kali ialah `Halmet (2000)` dan dari kolom `genre` yang banyak diminati pengguna ialah `drama`.<br>
 
+**B. rating.csv<br>**
+beberapa insight pada variabel `rating` diantaranya :<br>
+- Dataset berisi 100.004 rating dari berbagai user dan film, dengan distribusi waktu yang panjang (1990-an sampai 2016).
+- Rating cenderung tinggi, menunjukkan potensi bias positif dari pengguna.
+- pada variabel `rating` kolom `movieId` mengalami duplikat data yang akan di bersihkan pada tahap selanjutnya.<br>
+
+**C. tag.csv<br>**
+beberapa insight pada variabel `tag` diantaranya :<br>
+- dataset pada variabel `tag` memiliki data sebanyak 1296 entries dari pengguna dan film.
+- interaksi yang didapat bahwa film didominasi oleh film-film dengan userId yang relatif rendah dengan sejumlah kecil interaksi terjadi pada film-film dengan userId yang sangat tinggi.
+- mayoritas interaksi didominasi dengan rentang waktu dari pertengahan tahun 2012 sampai tahun 2016.<br>
+
+**D. link.csv<br>**
+beberapa insight yang didapat dari variabel `link` diantaranya :<br>
+- terdapat rentang nilai yang sangat lebar, ditunjukkan perbedaan besar antara nilai `min` dan `max` serta `std` yang signifikan. Hal ini mengindikasikan bahwa dataset mencakup film-film dengan ID yang beragam dalam masing-masing sistem.<br>
+
+#### 5. Informasi kondisi data
+**A. Variabel movie<br>**
+- Pada variabel movie tidak memiliki missing value dan semua data pada `movie` memiliki **data bersih<br>**.
+**B. Variabel rating<br>**
+- semua data dalam variabel `rating` tidak memiliki missing value dan user yang memberikan rating pada film cenderung tidak berstruktur dimana adanya user memberikan rating 1 sampai 4 pada film.<br>
+**C. Variabel tag<br>**
+- semua data pada variabel `tag` tidak memiliki memiliki missing value.<br>
+**D. Variabel link<br>**
+- pada semua data dalam variabel `link` tidak memiliki missing value.<br>
+  
 ## Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
 
