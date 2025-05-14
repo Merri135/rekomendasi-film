@@ -85,7 +85,7 @@ Gambar 1. Informasi data variabel movie<br>
 - `movieId` memiliki sejumlah Non-Null sebanyak 100004 entries dan typedata ``int``.
 - `timpestamp` memiliki sejumlah Non-Null sebanyak 100004 entries dan typedata `int`.<br>
 berikut gambar hasil informasi variabel rating<br>
-![alt text](.asset/ratinginfo.png)<br>
+![alt text](./asset/ratinginfo.png)<br>
 Gambar 2. Informasi data variabel rating<br>
 
 **C. tag.csv<br>**
