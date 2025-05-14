@@ -195,11 +195,24 @@ setelah melakukan penggabungan data unik sebelumnya, maka penulis perlu untuk me
 Gambar 15. penggabungan kedua variabel<br> 
 
 ## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
+Pada tahap ini, penulis melakukan data preparation pada semua data yang telah penulis lakukan pada tahap sebelumnya. berikut langkah-langkah tahap preparation yang akan dilakukan:<br>
+- Konversi kolom `timestamp` ke type data **datetime**.
+- mengurutkan berdasarkan `movieId`.
+- menghapus duplikat data.
+- Konversi semua series ke `list`.
+- memasukkan ke Dictionary baru.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+**Konversi kolom **``Timestamp``**<br>**
+Pada tahap ini, penulis perlu untuk melakukan konversi data type data `timestamp` menjadi typedata **datetime.<br>**
+
+**Menghapus duplikat data<br>**
+Pada tahap ini, penulis melakukan hapus duplikat data menggunakan fungsi `.drop_duplikat` pada dataset.<br>
+
+**Konversi semua series ke list<br>**
+Pada tahap ini, penulis melakukan konversi semua data series `movie` kedalam bentuk **list.** berfungsi untuk mengembalikan representasi array dalam bentuk list pada dataset.<br>
+
+**Memasukkan data ke Dictionary baru<br>**
+Pada tahap ini, penulis melakukan penyimpanan data yang telah diubah dan diberihkan ke dalam dict baru yaitu `movie_new`.<br>
 
 ## Modeling
 Tahapan ini membahas mengenai model sisten rekomendasi yang Anda buat untuk menyelesaikan permasalahan. Sajikan top-N recommendation sebagai output.
