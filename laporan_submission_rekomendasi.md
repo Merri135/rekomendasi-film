@@ -129,7 +129,7 @@ beberapa insight pada variabel `tag` diantaranya :<br>
 - interaksi yang didapat bahwa film didominasi oleh film-film dengan userId yang relatif rendah dengan sejumlah kecil interaksi terjadi pada film-film dengan userId yang sangat tinggi.
 - mayoritas interaksi didominasi dengan rentang waktu dari pertengahan tahun 2012 sampai tahun 2016.<br>
 berikut gambar hasil data statistik variabel tag<br>
-![alt text](./asset/tagdescribe.png)<br>
+![alt text](./asset/tahdescribe.png)<br>
 Gambar 7. Data statistik variabel tag<br>
 
 **D. link.csv<br>**
@@ -142,12 +142,13 @@ Gambar 8. Data statistik variabel link<br>
 #### 5. Informasi kondisi data
 **A. Variabel movie<br>**
 - Pada variabel movie tidak memiliki missing value dan semua data pada `movie` memiliki **data bersih<br>**.
-- 
+  
 **B. Variabel rating<br>**
 - semua data dalam variabel `rating` tidak memiliki missing value dan user yang memberikan rating pada film cenderung tidak berstruktur dimana adanya user memberikan rating 1 sampai 4 pada film.<br>
 
 **C. Variabel tag<br>**
 - semua data pada variabel `tag` tidak memiliki memiliki missing value.<br>
+
 **D. Variabel link<br>**
 - pada semua data dalam variabel `link` tidak memiliki missing value.<br>
   
