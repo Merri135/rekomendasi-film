@@ -55,12 +55,12 @@ Langkah-langkahnya ialah :
 - Memberikan hasil rekomendasi berdasarkan pola rating dari pengguna yang serupa.
 
 ## Data Understanding
-Pada tahap ini,penulis akan menjelaskan informasi mengenai jumlah data, kondisi data, dan informasi mengenai data yang digunakan untuk analisis data sampa evaluasi model pada dataset yang kita analisis lebih lanjut.saya mengambil dataset dari platform **kaggle** yaitu dataset **MovieLens**
+Pada tahap ini,penulis akan menjelaskan informasi mengenai jumlah data, kondisi data, dan informasi mengenai data yang digunakan untuk analisis data sampai evaluasi model pada dataset yang penulis analisis lebih lanjut.penulis mengambil dataset dari platform **kaggle** yaitu dataset **MovieLens**
 
 berikut link datasetnya : https://www.kaggle.com/datasets/snehal1409/movielens <br>
 #### 1. Jumlah Variabel pada Dataset MovieLens 
 Dataset ini terdiri 5 file yaitu :
-- `rating.csv` : Berisi jumlah data rating yang diberikan pengguna pada film yang diminat/disukai oleh pengguna.
+- `rating.csv` : Berisi jumlah data rating yang diberikan pengguna pada film yang diminati/disukai oleh pengguna.
 - `movie.csv` : berisi sejumlah data film/movie yang diminati pengguna sesuai genre yang pengguna sukai.
 - `tag.csv` : berisi sejumlah tag pada film yang pengguna gemari.
 - `link.csv` : berisi sejumlah link yang direkomendasikan pengguna ke pengguna lain sesuai minat gemar pengguna.
@@ -215,12 +215,34 @@ Pada tahap ini, penulis melakukan konversi semua data series `movie` kedalam ben
 Pada tahap ini, penulis melakukan penyimpanan data yang telah diubah dan diberihkan ke dalam dict baru yaitu `movie_new`.<br>
 
 ## Modeling
-Tahapan ini membahas mengenai model sisten rekomendasi yang Anda buat untuk menyelesaikan permasalahan. Sajikan top-N recommendation sebagai output.
+Pada tahap ini, penulis menggunakan 2 model yang berbeda yaitu :<br>
+**1. Content-Based Filtering<br>**
+**2. Collaborative Filtering<br>**
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menyajikan dua solusi rekomendasi dengan algoritma yang berbeda.
-- Menjelaskan kelebihan dan kekurangan dari solusi/pendekatan yang dipilih.
+#### 1. Content-Based Filtering
+Pada model ini bertujuan untuk merekomendasikan item berdasarkan **kemiripan atribut konten** antara item yang sering disukai pengguna dengan item lainnya.<br>
 
+**Cara kerjanya sebagai berikut :<br>**
+- **melakukan ekstraksi fitur** : pada tahap ini, model mengambil item yang akan di representasikan fitur kedalam bentuk vector dengan menggunakan **TF-IDF dan encoded** pada fitur.
+- **menghitung kemiripan(similarity)** : Pada tahap ini, model mengukur kemiripan dari pengguna dan semua item yang tersedia dengan menggunakan metrik **Cosine Similarity** pada fitur yang akan dianalisis lebih lanjut serta memberikan hasil fitur yang sesuai.
+- **menyajikan hasil rekomendasi** : Pada tahap ini, model menampilkan hasil yang telah diurutkan berdasarkan skor kemiripan tertinggi.<br>
+
+**Kelebihan dan kekurangan Content-Based Filtering<br>**
+- **Kelebihan** pada model ini ialah tidak bergantung pada interaksi pengguna lain dan efektif untuk pengguna baru yang memiliki preferensi awal atau cocok untuk **user cold-start**
+- pada model ini juga memiliki **kekurangan** ialah model terbatas pada konten yang mirip dengan yang sudah disukai dan tidak bisa merekomendasi item yang tidak punya metadata yang lengkap.
+
+**Output :<br>**
+
+#### 2. Collaborative Filtering
+Pada tahap ini, penulis menggunakan model kedua yaitu **Colaborative Filtering** menggunakan *Tensorflow Keras* untuk melakukan rekomendasi item berdasarkan **interaksi pengguna lain** yang memiliki preferensi yang mirip.<br>
+
+**Cara kerjanya sebagai berikut :<br>**
+- **membangun matriks interaksi** : Pada tahap ini, model membuat matriks pengguna vs item. yang dimana berisi nilai interaksi jumlah film yang banyak diminati pengguna berdasarkan **rating**.
+- **menghitung kemiripan** : Pada tahap ini,model melakukan kemiripan pada **user-based** dan **item-based** berdasarkan pola pengguna yang menyukai keduanya.
+- **melakukan prediksi preferensi** : Pada tahap ini,model melakukan prediksi untuk item yang belum dilihat pengguna berdasarkan interaksi pengguna yang sama.
+- **menyajikan hasil rekomendasi** : Pada tahap ini, model mengurutkan item berdasarkan skor prediksi yang telah dilatih dan mengambil hasil output untuk direkomendasikan.<br>
+
+**Output :<br>**
 ## Evaluation
 Pada bagian ini Anda perlu menyebutkan metrik evaluasi yang digunakan. Kemudian, jelaskan hasil proyek berdasarkan metrik evaluasi tersebut.
 
