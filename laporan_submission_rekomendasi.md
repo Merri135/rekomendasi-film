@@ -141,16 +141,16 @@ Gambar 8. Data statistik variabel link<br>
 
 #### 5. Informasi kondisi data
 **A. Variabel movie<br>**
-- Pada variabel movie tidak memiliki missing value dan semua data pada `movie` memiliki **data bersih.<br>**
+Pada variabel movie tidak memiliki missing value dan semua data pada `movie` memiliki **data bersih.<br>**
   
 **B. Variabel rating<br>**
-- semua data dalam variabel `rating` tidak memiliki missing value dan user yang memberikan rating pada film cenderung tidak berstruktur dimana adanya user memberikan rating 1 sampai 4 pada film.<br>
+semua data dalam variabel `rating` tidak memiliki missing value dan user yang memberikan rating pada film cenderung tidak berstruktur dimana adanya user memberikan rating 1 sampai 4 pada film.<br>
 
 **C. Variabel tag<br>**
-- semua data pada variabel `tag` tidak memiliki memiliki missing value.<br>
+semua data pada variabel `tag` tidak memiliki memiliki missing value.<br>
 
 **D. Variabel link<br>**
-- pada semua data dalam variabel `link` tidak memiliki missing value.<br>
+pada semua data dalam variabel `link` tidak memiliki missing value.<br>
 
 #### 6. Cek duplikat data
 Pada tahap ini, penulis perlu untuk mengecek apakah setiap variabel memiliki data duplikat, dari pengujian yang penulis lakukan, bahwa **semua variabel tidak memiliki duplikat data<br>**.
