@@ -242,6 +242,10 @@ Pada tahap ini, penulis menggunakan model kedua yaitu **Colaborative Filtering**
 - **melakukan prediksi preferensi** : Pada tahap ini,model melakukan prediksi untuk item yang belum dilihat pengguna berdasarkan interaksi pengguna yang sama.
 - **menyajikan hasil rekomendasi** : Pada tahap ini, model mengurutkan item berdasarkan skor prediksi yang telah dilatih dan mengambil hasil output untuk direkomendasikan.<br>
 
+**Kelebihan dan kekurangan Collaborative Filtering<br>**
+- **kelebihan** dari model ini ialah dapat direkomendasikan item berbagai genre dan tidak memerlukan detail konten item.
+- tetapi **kekurangan** pada model ini adalah mudah terpengaruh pada masalah **cold-start** dan rentan terhadap **sparsity/sedikit interaksi pengguna.**
+  
 **Output :<br>**
 ## Evaluation
 Pada bagian ini Anda perlu menyebutkan metrik evaluasi yang digunakan. Kemudian, jelaskan hasil proyek berdasarkan metrik evaluasi tersebut.
