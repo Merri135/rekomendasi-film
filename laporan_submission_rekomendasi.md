@@ -340,8 +340,31 @@ cara kerja pada metrik RMSE adalah RMSE memberikan gambaran seberapa jauh, rata-
 Gambar 26. Hasil nilai erros RMSE<br>
 dari yang penulis ketahui bahwa rata-rata kesalahan prediksi memiliki nilai cukup rendah yang mengindikasikan bahwa model memiliki peforma yang baik dengan skala 0-1.<br>
 
-**2. Mean Squared Error (MSE)<br>**
+**2. Mean Absolute Error (MAE)<br>**
 Pada tahap ini, penulis melakukan untuk memprediksi model menggunakan metrik MSE dengan menggunakan rumus sebagai berikut <br>
 ![alt text](./asset/mse.png)<br>
-Gambar 27. Rumus MSE<br>
+Gambar 27. Rumus MAE<br>
+keterangan :<br>
+N = Jumlah data<br>
+^ yi : Nilai prediksi.<br>
+yi = Nilai aktual (real).<br>
 
+MAE mengukur rata-rata dari kuadrat selisih antara nilai prediksi dan nilai aktual. ini menunjukkan seberapa jauh prediksi model dari kenyataan tanpa memperhatikan arah. dengan menggunakan rumus MAE penulis mengetahui hasil nilai error terhadap model yang diuji. berikut hasilnya <br>
+![alt text](./asset/hasilmse.png)<br>
+Gambar 28. Hasil nilai error MAE<br>
+dari gambar yang penulis ketahui bahwa nilai prediksi pada model memberikan prediksi rating yang cukup akurat dan lebih mudah diinterpretasikan dan kurang terpengaruh pada outlier.<br>
+
+#### Visualisasi Learning Curve 
+setelah penulis mendapatkan hasil nilai error dari kedua metrik yang uji pada model, maka penulis perlu untuk menampilkan hasil evaluasi model yang telah diuji sebelumnya dengan menampilkan menggunakan learning curva. berikut tampilannya <br>
+![alt text](./asset/curve.png)<br>
+Gambar 29. Visualisasi Hasil Evaluasi<br>
+dari gambar visualisasi hasil evaluasi yang penulis dapatkan menujukkan bahwa nilai data train terus menurun dengan bertambahnya epoch menandakan model belajar dengan baik dari data pelatihan, sedangkan pada data validation menurun dari awal tetapi stagnan bahkan sedikit naik di beberapa titik yang menandakan model mengalami indikasi overfitting dapat dilihat dari epoch ke-5 sampai epoch ke -6.<br>
+
+### Kesimpulan 
+- **Content-Based Filtering** hampir sama dengan analisis sentimen dimana sebagai pendekatan awal namun performa dalam memberikan rekomendasi pada user terbatas karena hanya mengandalkan judul film berdasarkan fitur **genre**. hasil evaluasi model yang didapat dengan menggunakan *Precision@K dan Recall@K* memberikan nilai yang akurat serta memberikan rekomendasi film yang relevan untuk pengguna. dari 2 contoh film input yang di evaluasi yaitu **``Toy Story (1995) dan Jumanji (1995)``** mendapatkan hasil sebagai berikut <br>
+| Film               | Precision@5 | Recall@5 |
+|--------------------|-------------|----------|
+| Toy Story (1995)   | 16.60%      | 100.00%  |
+| Jumanji (1995)     | 2.62%       | 100.00%  |
+<br>
+- **Collaborative Filtering** memberikan hasil evaluasi dengan hasil terbaik serta performa yang baik dalam menangkap pola laten preferensi pengguna, dengan menggunakan 2 metrik pada model yaitu **RMSE dan MAE** yang menujukkan nilai error yang rendah dan performa yang baik pada model.
