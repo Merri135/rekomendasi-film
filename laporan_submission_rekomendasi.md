@@ -369,4 +369,5 @@ dari gambar visualisasi hasil evaluasi yang penulis dapatkan menujukkan bahwa ni
 | Jumanji (1995)     | 2.62%       | 100.00%  |
 
 <br>
+
 - **Collaborative Filtering** memberikan hasil evaluasi dengan hasil terbaik serta performa yang baik dalam menangkap pola laten preferensi pengguna, dengan menggunakan 2 metrik pada model yaitu **RMSE dan MAE** yang menujukkan nilai error yang rendah dan performa yang baik pada model.
