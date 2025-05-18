@@ -168,34 +168,34 @@ Pada hasil visualisasi yang diketahui bahwa genre drama yang paling banyak menca
 
 ### Data Processing 
 Pada tahap ini, penulis melakukan Processing dari semua dataset yang telah penulis lakukan sebelumnya di data understanding, sekarang penulis perlu untuk melakukan penggabungan dataset yang akan dianalisis lebih lanjut ke model yang akan penulis latih. langkah - langkah yang dilakukan penulis ialah :<br>
-- menggabungkan semua data movieId
-- menggabungkan semua data userId
-- menyimpan ke dataframe baru.
-- mengecek missing value
-- menampilkan hasil rating tertinggi dan terendah
+1. menggabungkan semua data movieId<br>
+2. menggabungkan semua data userId<br>
+3. menyimpan ke dataframe baru.<br>
+4. mengecek missing value<br>
+5. menampilkan hasil rating tertinggi dan terendah<br>
 
 
-**Menggabungkan semua data movieId<br>**
+**1. Menggabungkan semua data movieId<br>**
   Pada tahap ini, penulis melakukan penggabungan data terhadap data unik `movieId` dari semua variabel-varibel yang memiliki hubungan satu sama lain, setelah melakukan penggabungan data unik, penulis menampilkan banyak jumlah data unik `movieId`. berikut jumlah data unik `movieId`<br>
 ![alt text](./asset/lost.png)<br>
 Gambar 13. Hasil jumlah data `movieId`.<br>
 
-**Menggabungkan semua data userId<br>**
+**2. Menggabungkan semua data userId<br>**
 Pada tahap ini, penulis melakukan penggabungan data terhadap data unik `userId` dari semua variabel-variabel yang memiliki hubungan satu sama lain, setelah melakukan penggabungan data unik, penulis menampilkan hasil jumlah dari penggabungan yang penulis buat, berikut hasilnya<br>
 ![alt text](./asset/unik.png)<br>
 Gambar 14. Hasil jumlah data `userId`<br>
 
-**Menyimpan ke dataframe baru<br>**
+**3. Menyimpan ke dataframe baru<br>**
 setelah melakukan penggabungan data unik sebelumnya, maka penulis perlu untuk menyimpan semua penggabungan data unik kedalam dataframe baru yaitu `all_movie_name`, seperti gambar berikut<br>
 ![alt text](./asset/user.png)<br>
 Gambar 15. penggabungan kedua variabel<br> 
 
-**Mengecek missing value<br>**
+**4. Mengecek missing value<br>**
 setelah melakukan tahap penggabungan dan menyimpan ke dataframe baru, maka penulis perlu untuk mengetahui apakah data memiliki missing value, dari yang penulis ketahui bahwa `all_movie_name`` tidak memiliki nilai kosong berikut hasilnya<br>
 ![alt text](./asset/missing.png)<br>
 Gambar 16. Missing value<br>
 
-**Menampilkan hasil rating tertinggi dan terendah<br>**
+**5. Menampilkan hasil rating tertinggi dan terendah<br>**
 Pada tahap ini, penulis melakukan untuk menampilkan hasil penggabungan pada rating tertinggi dan terendah berdasarkan judul film, dari penulis yang ketahui bahwa rating tertinggi pada judul fiml ialah **Zerophilia (2005) sampai Drained (O cheiro do Ralo) (2006)** memiliki rating dengan 5.0. dan rating terendah pada judul film adalah **Zombie Holocaust (a.k.a. Doctor Butcher M.D.) (Zombi Holocaust) (1980) sampai Santa with Muscies (1996)** memiliki rating terendah dengan rating 0.5 . berikut hasilnya<br>
 ![alt text](./asset/tinggi.png)<br>
 Gambar 17. Hasil Rating tertinggi<br>
@@ -205,22 +205,21 @@ Gambar 18. Hasil Rating terendah<br>
 
 ## Data Preparation
 Pada tahap ini, penulis melakukan data preparation pada semua data yang telah penulis lakukan pada tahap sebelumnya. berikut langkah-langkah tahap preparation yang akan dilakukan:<br>
-- Konversi kolom `timestamp` ke type data **datetime**.
-- mengurutkan berdasarkan `movieId`.
-- menghapus duplikat data.
-- Konversi semua series ke `list`.
-- memasukkan ke Dictionary baru.
+1. Konversi kolom `timestamp` ke type data **datetime**.<br>
+2. menghapus duplikat data.<br>
+3. Konversi semua series ke `list`.<br>
+4. memasukkan ke Dictionary baru.<br>
 
-**Konversi kolom **``Timestamp``**<br>**
+**1. Konversi kolom **``Timestamp``**<br>**
 Pada tahap ini, penulis perlu untuk melakukan konversi data type data `timestamp` menjadi typedata **datetime.<br>**
 
-**Menghapus duplikat data<br>**
+**2. Menghapus duplikat data<br>**
 Pada tahap ini, penulis melakukan hapus duplikat data menggunakan fungsi `.drop_duplikat` pada dataset.<br>
 
-**Konversi semua series ke list<br>**
+**3. Konversi semua series ke list<br>**
 Pada tahap ini, penulis melakukan konversi semua data series `movie` kedalam bentuk **list.** berfungsi untuk mengembalikan representasi array dalam bentuk list pada dataset.<br>
 
-**Memasukkan data ke Dictionary baru<br>**
+**4. Memasukkan data ke Dictionary baru<br>**
 Pada tahap ini, penulis melakukan penyimpanan data yang telah diubah dan diberihkan ke dalam dict baru yaitu `movie_new`.<br>
 
 ## Modeling
@@ -241,13 +240,15 @@ Pada model ini bertujuan untuk merekomendasikan item berdasarkan **kemiripan atr
 - pada model ini juga memiliki **kekurangan** ialah model terbatas pada konten yang mirip dengan yang sudah disukai dan tidak bisa merekomendasi item yang tidak punya metadata yang lengkap.
 
 **Output :<br>**
-berikut hasil model 1: **Content-Based Filtering**<br>
+berikut 2 nilai input film pada model **Content-Based Filtering**<br>
 ![alt text](./asset/toy.png)<br>
 ![alt text](./asset/jumanji.png)<br>
 Gambar 19. Hasil Output Content Based Filtering<br>
 dari gambar diatas, penulis menampilkan 2 contoh judul film yang penulis rekomendasikan untuk melihat seberapa banyak pengguna menyukai film tersebut, dari yang penulis ketahui bahwa film **Toy Story (1995) dan Jumanji (1995)** memiliki 10 top yang banyak diminati oleh pengguna. berikut hasilnya<br>
 
+- **Toy Story (1995)<br>**
 ![alt text](./asset/toys.png)<br>
+- **Jumanji (1995)<br>**
 ![alt text](./asset/jumanjis.png)<br>
 Gambar 20. Hasil 10 Top yang diminati pengguna<br>
 
@@ -265,7 +266,7 @@ Pada tahap ini, penulis menggunakan model kedua yaitu **Colaborative Filtering**
 - tetapi **kekurangan** pada model ini adalah mudah terpengaruh pada masalah **cold-start** dan rentan terhadap **sparsity/sedikit interaksi pengguna.**
   
 **Output :<br>**
-dari hasil yang didapat dari model kedua bahwa banyak user yang memberikan rekomendasi pada film berdasarkan rating ialah :<br>
+dari hasil yang didapat dari model ini ialah banyak user yang memberikan rekomendasi pada film berdasarkan rating ialah :<br>
 > userId : 30
 
 ![alt text](./asset/users.png)<br>
@@ -285,10 +286,10 @@ Pada tahap ini, penulis melakukan evaluasi kinerja sistem rekomendasi yang telah
 #### 1. Content-Based Filtering
 **Metriks Evaluasi**
 Berikut metriks evaluasi yang akan digunakan untuk mengukur kinerja sistem rekomendasi film, sebagai berikut:<br>
-- Precision@K
-- Recall@K
+A. Precision@K
+B. Recall@K
 
-- **Precision@K<br>**
+**A. Precision@K<br>**
 Precision@K mengukur proporsi item yang benar-benar relevan di antara K item teratas yang direkomendasikan oleh sistem. Precision@K berguna untuk menampilkan hasil precision tertinggi yang paling relevan untuk diberikan ke pengguna.berikut rumus matriks *Precision@K* :<br>
 ![alt text](./asset/pre.png)<br>
 Gambar 23. Rumus Precision@K<br>
@@ -296,7 +297,7 @@ Gambar 23. Rumus Precision@K<br>
 - Recommended nilai K: Item yang direkomendasikan (top-K)
 - cara kerja precision : *Precision@K* bekerja dengan menghitung berapa banyak film yang relevan diantara film yang direkomendasikan oleh sistem.sebagai contoh, jika nilai K diatur ke 10 maka akan menampilkan hasil persentase film yang relevan dengan 10 top teratas.
 
-- **Recall@K<br>**
+**B. Recall@K<br>**
 Recall@K mengukur proporsi item relevan yang berhasil ditemukan dalam top-K rekomendasi. Recall@K berguna untuk memastikan bahwa film yang relevan tidak terlewatkan oleh sistem. berikut rumus metrik *Recall@K*:<br>
 ![alt text](./asset/rec.png)<br>
 Gambar 24. Rumus metrik Recall@K.<br>
@@ -337,4 +338,10 @@ yi = Nilai aktual (real).<br>
 cara kerja pada metrik RMSE adalah RMSE memberikan gambaran seberapa jauh, rata-rata dan prediksi model dari nilai rating sebenarnya. jika nilai RMSE memiliki nilai rendah maka menunjukkan bahwa model lebih akurat dalam memprediksi rating. berikut hasil RMSE dari model <br>
 ![alt text](./asset/hasilrmse.png)<br>
 Gambar 26. Hasil nilai erros RMSE<br>
-dari yang penulis ketahui bahwa 
+dari yang penulis ketahui bahwa rata-rata kesalahan prediksi memiliki nilai cukup rendah yang mengindikasikan bahwa model memiliki peforma yang baik dengan skala 0-1.<br>
+
+**2. Mean Squared Error (MSE)<br>**
+Pada tahap ini, penulis melakukan untuk memprediksi model menggunakan metrik MSE dengan menggunakan rumus sebagai berikut <br>
+![alt text](./asset/mse.png)<br>
+Gambar 27. Rumus MSE<br>
+
