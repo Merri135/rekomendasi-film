@@ -354,7 +354,7 @@ MAE mengukur rata-rata dari kuadrat selisih antara nilai prediksi dan nilai aktu
 Gambar 28. Hasil nilai error MAE<br>
 dari gambar yang penulis ketahui bahwa nilai prediksi pada model memberikan prediksi rating yang cukup akurat dan lebih mudah diinterpretasikan dan kurang terpengaruh pada outlier.<br>
 
-#### Visualisasi Learning Curve 
+### Visualisasi Learning Curve 
 setelah penulis mendapatkan hasil nilai error dari kedua metrik yang uji pada model, maka penulis perlu untuk menampilkan hasil evaluasi model yang telah diuji sebelumnya dengan menampilkan menggunakan learning curva. berikut tampilannya <br>
 ![alt text](./asset/curve.png)<br>
 Gambar 29. Visualisasi Hasil Evaluasi<br>
@@ -362,9 +362,11 @@ dari gambar visualisasi hasil evaluasi yang penulis dapatkan menujukkan bahwa ni
 
 ### Kesimpulan 
 - **Content-Based Filtering** hampir sama dengan analisis sentimen dimana sebagai pendekatan awal namun performa dalam memberikan rekomendasi pada user terbatas karena hanya mengandalkan judul film berdasarkan fitur **genre**. hasil evaluasi model yang didapat dengan menggunakan *Precision@K dan Recall@K* memberikan nilai yang akurat serta memberikan rekomendasi film yang relevan untuk pengguna. dari 2 contoh film input yang di evaluasi yaitu **``Toy Story (1995) dan Jumanji (1995)``** mendapatkan hasil sebagai berikut <br>
+
 | Film               | Precision@5 | Recall@5 |
 |--------------------|-------------|----------|
 | Toy Story (1995)   | 16.60%      | 100.00%  |
 | Jumanji (1995)     | 2.62%       | 100.00%  |
+
 <br>
 - **Collaborative Filtering** memberikan hasil evaluasi dengan hasil terbaik serta performa yang baik dalam menangkap pola laten preferensi pengguna, dengan menggunakan 2 metrik pada model yaitu **RMSE dan MAE** yang menujukkan nilai error yang rendah dan performa yang baik pada model.
