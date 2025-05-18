@@ -359,7 +359,7 @@ setelah penulis mendapatkan hasil nilai error dari kedua metrik yang uji pada mo
 ![alt text](./asset/curve.png)<br>
 Gambar 27. Visualisasi Hasil Evaluasi<br>
 dari gambar visualisasi hasil evaluasi yang penulis dapatkan menujukkan bahwa nilai data train terus menurun dengan bertambahnya epoch menandakan model belajar dengan baik dari data pelatihan, sedangkan pada data validation menurun dari awal tetapi stagnan bahkan sedikit naik di beberapa titik yang menandakan model mengalami indikasi overfitting dapat dilihat dari epoch ke-5 sampai epoch ke -6.<br>
-
+ 
 ### Kesimpulan 
 - **Content-Based Filtering** hampir sama dengan analisis sentimen dimana sebagai pendekatan awal namun performa dalam memberikan rekomendasi pada user terbatas karena hanya mengandalkan judul film berdasarkan fitur **genre**. hasil evaluasi model yang didapat dengan menggunakan *Precision@K5 dan Recall@K5* memberikan nilai yang akurat serta memberikan rekomendasi film yang relevan untuk pengguna. dari 2 contoh film input yang di evaluasi yaitu **``Toy Story (1995) dan Jumanji (1995)``** mendapatkan hasil sebagai berikut <br>
 
