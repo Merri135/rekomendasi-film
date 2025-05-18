@@ -178,30 +178,30 @@ Pada tahap ini, penulis melakukan Processing dari semua dataset yang telah penul
 **1. Menggabungkan semua data movieId<br>**
   Pada tahap ini, penulis melakukan penggabungan data terhadap data unik `movieId` dari semua variabel-varibel yang memiliki hubungan satu sama lain, setelah melakukan penggabungan data unik, penulis menampilkan banyak jumlah data unik `movieId`. berikut jumlah data unik `movieId`<br>
 ![alt text](./asset/lost.png)<br>
-Gambar 13. Hasil jumlah data `movieId`.<br>
+Gambar 11. Hasil jumlah data `movieId`.<br>
 
 **2. Menggabungkan semua data userId<br>**
 Pada tahap ini, penulis melakukan penggabungan data terhadap data unik `userId` dari semua variabel-variabel yang memiliki hubungan satu sama lain, setelah melakukan penggabungan data unik, penulis menampilkan hasil jumlah dari penggabungan yang penulis buat, berikut hasilnya<br>
 ![alt text](./asset/unik.png)<br>
-Gambar 14. Hasil jumlah data `userId`<br>
+Gambar 12. Hasil jumlah data `userId`<br>
 
 **3. Menyimpan ke dataframe baru<br>**
 setelah melakukan penggabungan data unik sebelumnya, maka penulis perlu untuk menyimpan semua penggabungan data unik kedalam dataframe baru yaitu `all_movie_name`, seperti gambar berikut<br>
 ![alt text](./asset/user.png)<br>
-Gambar 15. penggabungan kedua variabel<br> 
+Gambar 13. penggabungan kedua variabel<br> 
 
 **4. Mengecek missing value<br>**
 setelah melakukan tahap penggabungan dan menyimpan ke dataframe baru, maka penulis perlu untuk mengetahui apakah data memiliki missing value, dari yang penulis ketahui bahwa `all_movie_name`` tidak memiliki nilai kosong berikut hasilnya<br>
 ![alt text](./asset/missing.png)<br>
-Gambar 16. Missing value<br>
+Gambar 14. Missing value<br>
 
 **5. Menampilkan hasil rating tertinggi dan terendah<br>**
 Pada tahap ini, penulis melakukan untuk menampilkan hasil penggabungan pada rating tertinggi dan terendah berdasarkan judul film, dari penulis yang ketahui bahwa rating tertinggi pada judul fiml ialah **Zerophilia (2005) sampai Drained (O cheiro do Ralo) (2006)** memiliki rating dengan 5.0. dan rating terendah pada judul film adalah **Zombie Holocaust (a.k.a. Doctor Butcher M.D.) (Zombi Holocaust) (1980) sampai Santa with Muscies (1996)** memiliki rating terendah dengan rating 0.5 . berikut hasilnya<br>
 ![alt text](./asset/tinggi.png)<br>
-Gambar 17. Hasil Rating tertinggi<br>
+Gambar 15. Hasil Rating tertinggi<br>
 
 ![alt text](./asset/rendah.png)<br>
-Gambar 18. Hasil Rating terendah<br>
+Gambar 16. Hasil Rating terendah<br>
 
 ## Data Preparation
 Pada tahap ini, penulis melakukan data preparation pada semua data yang telah penulis lakukan pada tahap sebelumnya. berikut langkah-langkah tahap preparation yang akan dilakukan:<br>
@@ -243,14 +243,14 @@ Pada model ini bertujuan untuk merekomendasikan item berdasarkan **kemiripan atr
 berikut 2 nilai input film pada model **Content-Based Filtering**<br>
 ![alt text](./asset/toy.png)<br>
 ![alt text](./asset/jumanji.png)<br>
-Gambar 19. Hasil Output Content Based Filtering<br>
+Gambar 17. Hasil Output Content Based Filtering<br>
 dari gambar diatas, penulis menampilkan 2 contoh judul film yang penulis rekomendasikan untuk melihat seberapa banyak pengguna menyukai film tersebut, dari yang penulis ketahui bahwa film **Toy Story (1995) dan Jumanji (1995)** memiliki 10 top yang banyak diminati oleh pengguna. berikut hasilnya<br>
 
 - **Toy Story (1995)<br>**
 ![alt text](./asset/toys.png)<br>
 - **Jumanji (1995)<br>**
 ![alt text](./asset/jumanjis.png)<br>
-Gambar 20. Hasil 10 Top yang diminati pengguna<br>
+Gambar 18. Hasil 10 Top yang diminati pengguna<br>
 
 #### 2. Collaborative Filtering
 Pada tahap ini, penulis menggunakan model kedua yaitu **Colaborative Filtering** menggunakan *Tensorflow Keras* untuk melakukan rekomendasi item berdasarkan **interaksi pengguna lain** yang memiliki preferensi yang mirip.<br>
@@ -270,10 +270,10 @@ dari hasil yang didapat dari model ini ialah banyak user yang memberikan rekomen
 > userId : 30
 
 ![alt text](./asset/users.png)<br>
-Gambar 21. Hasil jumlah users<br>
+Gambar 19. Hasil jumlah users<br>
 berikut hasil 10 top dari model 2: **Collaborative Filtering<br>**
 ![alt text](./asset/rekom.png)<br>
-Gambar 22. 10 top rekomendasi film berdasarkan rating<br>
+Gambar 20. 10 top rekomendasi film berdasarkan rating<br>
 dari gambar yang diketahui bahwa genre yang paling banyak diminati oleh pengguna ialah **Drama**.<br>
 
 #### Rekomendasi Top-N Film
@@ -286,50 +286,50 @@ Pada tahap ini, penulis melakukan evaluasi kinerja sistem rekomendasi yang telah
 #### 1. Content-Based Filtering
 **Metriks Evaluasi**
 Berikut metriks evaluasi yang akan digunakan untuk mengukur kinerja sistem rekomendasi film, sebagai berikut:<br>
-A. Precision@K
-B. Recall@K
+A. Precision@K5
+B. Recall@K5
 
-**A. Precision@K<br>**
-Precision@K mengukur proporsi item yang benar-benar relevan di antara K item teratas yang direkomendasikan oleh sistem. Precision@K berguna untuk menampilkan hasil precision tertinggi yang paling relevan untuk diberikan ke pengguna.berikut rumus matriks *Precision@K* :<br>
+**A. Precision@K5<br>**
+Precision@K5 mengukur proporsi item yang benar-benar relevan di antara K item teratas yang direkomendasikan oleh sistem. Precision@K5 berguna untuk menampilkan hasil precision tertinggi yang paling relevan untuk diberikan ke pengguna.berikut rumus matriks *Precision@K5* :<br>
 ![alt text](./asset/pre.png)<br>
-Gambar 23. Rumus Precision@K<br>
+Gambar 21. Rumus Precision@K5<br>
 
 - Recommended nilai K: Item yang direkomendasikan (top-K)
-- cara kerja precision : *Precision@K* bekerja dengan menghitung berapa banyak film yang relevan diantara film yang direkomendasikan oleh sistem.sebagai contoh, jika nilai K diatur ke 10 maka akan menampilkan hasil persentase film yang relevan dengan 10 top teratas.
+- cara kerja precision : *Precision@K5* bekerja dengan menghitung berapa banyak film yang relevan diantara film yang direkomendasikan oleh sistem.sebagai contoh, jika nilai K diatur ke 10 maka akan menampilkan hasil persentase film yang relevan dengan 10 top teratas.
 
-**B. Recall@K<br>**
-Recall@K mengukur proporsi item relevan yang berhasil ditemukan dalam top-K rekomendasi. Recall@K berguna untuk memastikan bahwa film yang relevan tidak terlewatkan oleh sistem. berikut rumus metrik *Recall@K*:<br>
+**B. Recall@K5<br>**
+Recall@K5 mengukur proporsi item relevan yang berhasil ditemukan dalam top-K rekomendasi. Recall@K5 berguna untuk memastikan bahwa film yang relevan tidak terlewatkan oleh sistem. berikut rumus metrik *Recall@K5*:<br>
 ![alt text](./asset/rec.png)<br>
-Gambar 24. Rumus metrik Recall@K.<br>
+Gambar 22. Rumus metrik Recall@K5.<br>
 
 - Recommended K : Top-K item yang direkomendasikan yang paling relevan
-- cara kerja Recall@K : *Recall@K* bekerja untuk menghitung nilai top-K yang direkomendasikan untuk user sesuai total item yang paling relevan. contohnya, jika film **Toy Story (1995) dan Jumanji (1995)** direkomendasikan ke 10 top film terbaik, maka *Recall@K* akan memberikan hasil rekomendasi film yang paling relevan untuk user.<br>
+- cara kerja Recall@K5 : *Recall@K5* bekerja untuk menghitung nilai top-K yang direkomendasikan untuk user sesuai total item yang paling relevan. contohnya, jika film **Toy Story (1995) dan Jumanji (1995)** direkomendasikan ke 10 top film terbaik, maka *Recall@K5* akan memberikan hasil rekomendasi film yang paling relevan untuk user.<br>
 
 #### Hasil Evaluasi
 Berdasarkan hasil evaluasi yang didapatkan, berikut adalah peforma sistem rekomendasi pada dua film input yang penulis buat yaitu *"Toy Story (1995) dan Jumanji (1995)* :
 
 - **Toy Story (1995) :**
-  - *Precision@K* : 16,60%
-  - *Recall@K* : 100,00%
+  - *Precision@K5* : 16,60%
+  - *Recall@K5* : 100,00%
 
-untuk hasil pada film **Toy Story (1995)** memiliki *Precision@K* sebanyak 16,60% menunjukkan bahwa dari 5 film yang direkomedasikan untuk user yang paling relevan sebanyak 0,83% menandakan sistem berhasil menemukan item yang relevan untuk user. jika berdasarkan metriks *Recall@K* memiliki nilai sebanyak 100,00% menunjukkan semua film relevan berhasil ter-cover dalam 5 rekomendasi serta berhasil menemukan semua film yang penting dari daftar rekomendasi.
+untuk hasil pada film **Toy Story (1995)** memiliki *Precision@K5* sebanyak 16,60% menunjukkan bahwa dari 5 film yang direkomedasikan untuk user yang paling relevan sebanyak 0,83% menandakan sistem berhasil menemukan item yang relevan untuk user. jika berdasarkan metriks *Recall@K5* memiliki nilai sebanyak 100,00% menunjukkan semua film relevan berhasil ter-cover dalam 5 rekomendasi serta berhasil menemukan semua film yang penting dari daftar rekomendasi.
 
 - **Jumanji (1995)**
-  - *Precision@K* : 2,62%
-  - *Recall@K* : 100,00%
+  - *Precision@K5* : 2,62%
+  - *Recall@K5* : 100,00%
 
-untuk hasil yang didapat dari rekomendasi film yang kedua ialah bahwa nilai *Precision@K* sebanyak 2,62% yang menandakan bahwa model tidak memberikan rekomendasi film yang secara ketat relevan diantara 5 top rekomendasi. sedangkan dari metrik *Recall@K* memiliki nilai 100,00% yang menandakan bahwa model berhasil menangkap seluruh film yang relevan yang cocok dengan film **Jumanji (1995)** dalam *Cosine Similarity*.
+untuk hasil yang didapat dari rekomendasi film yang kedua ialah bahwa nilai *Precision@K5* sebanyak 2,62% yang menandakan bahwa model tidak memberikan rekomendasi film yang secara ketat relevan diantara 5 top rekomendasi. sedangkan dari metrik *Recall@K5* memiliki nilai 100,00% yang menandakan bahwa model berhasil menangkap seluruh film yang relevan yang cocok dengan film **Jumanji (1995)** dalam *Cosine Similarity*.
 
 ### 2. Collaborative Filtering
 **Metrik Evaluasi<br>**
 Pada tahap ini, penulis melakukan evaluasi pada model **Collaborative Filtering** dengan menggunakan :<br>
-- RMSE
-- MSE
+1. RMSE
+2. MSE
 
-- **Root Mean Squared Error (RMSE)<br>**
+**1. Root Mean Squared Error (RMSE)<br>**
 RMSE adalah akar kuadrat dari MSE yang berfungsi untuk mengukur perbedaan antara nilai rating asli dengan nilai rating yang diprediksi oleh model. berikut rumus RMSE :<br>
 ![alt text](./asset/rmse.png)<br>
-Gambar 25. Rumus RMSE<br>
+Gambar 23. Rumus RMSE<br>
 keterangan :<br>
 N = Jumlah data<br>
 ^ yi : Nilai prediksi.<br>
@@ -337,13 +337,13 @@ yi = Nilai aktual (real).<br>
 
 cara kerja pada metrik RMSE adalah RMSE memberikan gambaran seberapa jauh, rata-rata dan prediksi model dari nilai rating sebenarnya. jika nilai RMSE memiliki nilai rendah maka menunjukkan bahwa model lebih akurat dalam memprediksi rating. berikut hasil RMSE dari model <br>
 ![alt text](./asset/hasilrmse.png)<br>
-Gambar 26. Hasil nilai erros RMSE<br>
+Gambar 24. Hasil nilai erros RMSE<br>
 dari yang penulis ketahui bahwa rata-rata kesalahan prediksi memiliki nilai cukup rendah yang mengindikasikan bahwa model memiliki peforma yang baik dengan skala 0-1.<br>
 
 **2. Mean Absolute Error (MAE)<br>**
 Pada tahap ini, penulis melakukan untuk memprediksi model menggunakan metrik MSE dengan menggunakan rumus sebagai berikut <br>
 ![alt text](./asset/mse.png)<br>
-Gambar 27. Rumus MAE<br>
+Gambar 25. Rumus MAE<br>
 keterangan :<br>
 N = Jumlah data<br>
 ^ yi : Nilai prediksi.<br>
@@ -351,17 +351,17 @@ yi = Nilai aktual (real).<br>
 
 MAE mengukur rata-rata dari kuadrat selisih antara nilai prediksi dan nilai aktual. ini menunjukkan seberapa jauh prediksi model dari kenyataan tanpa memperhatikan arah. dengan menggunakan rumus MAE penulis mengetahui hasil nilai error terhadap model yang diuji. berikut hasilnya <br>
 ![alt text](./asset/hasilmse.png)<br>
-Gambar 28. Hasil nilai error MAE<br>
+Gambar 26. Hasil nilai error MAE<br>
 dari gambar yang penulis ketahui bahwa nilai prediksi pada model memberikan prediksi rating yang cukup akurat dan lebih mudah diinterpretasikan dan kurang terpengaruh pada outlier.<br>
 
 ### Visualisasi Learning Curve 
 setelah penulis mendapatkan hasil nilai error dari kedua metrik yang uji pada model, maka penulis perlu untuk menampilkan hasil evaluasi model yang telah diuji sebelumnya dengan menampilkan menggunakan learning curva. berikut tampilannya <br>
 ![alt text](./asset/curve.png)<br>
-Gambar 29. Visualisasi Hasil Evaluasi<br>
+Gambar 27. Visualisasi Hasil Evaluasi<br>
 dari gambar visualisasi hasil evaluasi yang penulis dapatkan menujukkan bahwa nilai data train terus menurun dengan bertambahnya epoch menandakan model belajar dengan baik dari data pelatihan, sedangkan pada data validation menurun dari awal tetapi stagnan bahkan sedikit naik di beberapa titik yang menandakan model mengalami indikasi overfitting dapat dilihat dari epoch ke-5 sampai epoch ke -6.<br>
 
 ### Kesimpulan 
-- **Content-Based Filtering** hampir sama dengan analisis sentimen dimana sebagai pendekatan awal namun performa dalam memberikan rekomendasi pada user terbatas karena hanya mengandalkan judul film berdasarkan fitur **genre**. hasil evaluasi model yang didapat dengan menggunakan *Precision@K dan Recall@K* memberikan nilai yang akurat serta memberikan rekomendasi film yang relevan untuk pengguna. dari 2 contoh film input yang di evaluasi yaitu **``Toy Story (1995) dan Jumanji (1995)``** mendapatkan hasil sebagai berikut <br>
+- **Content-Based Filtering** hampir sama dengan analisis sentimen dimana sebagai pendekatan awal namun performa dalam memberikan rekomendasi pada user terbatas karena hanya mengandalkan judul film berdasarkan fitur **genre**. hasil evaluasi model yang didapat dengan menggunakan *Precision@K5 dan Recall@K5* memberikan nilai yang akurat serta memberikan rekomendasi film yang relevan untuk pengguna. dari 2 contoh film input yang di evaluasi yaitu **``Toy Story (1995) dan Jumanji (1995)``** mendapatkan hasil sebagai berikut <br>
 
 | Film               | Precision@5 | Recall@5 |
 |--------------------|-------------|----------|
