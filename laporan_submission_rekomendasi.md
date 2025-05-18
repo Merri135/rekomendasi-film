@@ -286,39 +286,39 @@ Pada tahap ini, penulis melakukan evaluasi kinerja sistem rekomendasi yang telah
 #### 1. Content-Based Filtering
 **Metriks Evaluasi**
 Berikut metriks evaluasi yang akan digunakan untuk mengukur kinerja sistem rekomendasi film, sebagai berikut:<br>
-A. Precision@K5
-B. Recall@K5
+A. Precision@5
+B. Recall@5
 
 **A. Precision@K5<br>**
-Precision@K5 mengukur proporsi item yang benar-benar relevan di antara K item teratas yang direkomendasikan oleh sistem. Precision@K5 berguna untuk menampilkan hasil precision tertinggi yang paling relevan untuk diberikan ke pengguna.berikut rumus matriks *Precision@K5* :<br>
+Precision@5 mengukur proporsi item yang benar-benar relevan di antara K item teratas yang direkomendasikan oleh sistem. Precision@5 berguna untuk menampilkan hasil precision tertinggi yang paling relevan untuk diberikan ke pengguna.berikut rumus matriks *Precision@5* :<br>
 ![alt text](./asset/pre.png)<br>
-Gambar 21. Rumus Precision@K5<br>
+Gambar 21. Rumus Precision@5<br>
 
 - Recommended nilai K: Item yang direkomendasikan (top-K)
-- cara kerja precision : *Precision@K5* bekerja dengan menghitung berapa banyak film yang relevan diantara film yang direkomendasikan oleh sistem.sebagai contoh, jika nilai K diatur ke 10 maka akan menampilkan hasil persentase film yang relevan dengan 10 top teratas.
+- cara kerja precision : *Precision@5* bekerja dengan menghitung berapa banyak film yang relevan diantara film yang direkomendasikan oleh sistem.sebagai contoh, jika nilai K diatur ke 10 maka akan menampilkan hasil persentase film yang relevan dengan 10 top teratas.
 
-**B. Recall@K5<br>**
-Recall@K5 mengukur proporsi item relevan yang berhasil ditemukan dalam top-K rekomendasi. Recall@K5 berguna untuk memastikan bahwa film yang relevan tidak terlewatkan oleh sistem. berikut rumus metrik *Recall@K5*:<br>
+**B. Recall@5<br>**
+Recall@5 mengukur proporsi item relevan yang berhasil ditemukan dalam top-K rekomendasi. Recall@5 berguna untuk memastikan bahwa film yang relevan tidak terlewatkan oleh sistem. berikut rumus metrik *Recall@5*:<br>
 ![alt text](./asset/rec.png)<br>
-Gambar 22. Rumus metrik Recall@K5.<br>
+Gambar 22. Rumus metrik Recall@5.<br>
 
 - Recommended K : Top-K item yang direkomendasikan yang paling relevan
-- cara kerja Recall@K5 : *Recall@K5* bekerja untuk menghitung nilai top-K yang direkomendasikan untuk user sesuai total item yang paling relevan. contohnya, jika film **Toy Story (1995) dan Jumanji (1995)** direkomendasikan ke 10 top film terbaik, maka *Recall@K5* akan memberikan hasil rekomendasi film yang paling relevan untuk user.<br>
+- cara kerja Recall@5 : *Recall@5* bekerja untuk menghitung nilai top-K yang direkomendasikan untuk user sesuai total item yang paling relevan. contohnya, jika film **Toy Story (1995) dan Jumanji (1995)** direkomendasikan ke 10 top film terbaik, maka *Recall@5* akan memberikan hasil rekomendasi film yang paling relevan untuk user.<br>
 
 #### Hasil Evaluasi
 Berdasarkan hasil evaluasi yang didapatkan, berikut adalah peforma sistem rekomendasi pada dua film input yang penulis buat yaitu *"Toy Story (1995) dan Jumanji (1995)* :
 
 - **Toy Story (1995) :**
-  - *Precision@K5* : 16,60%
-  - *Recall@K5* : 100,00%
+  - *Precision@5* : 16,60%
+  - *Recall@5* : 100,00%
 
-untuk hasil pada film **Toy Story (1995)** memiliki *Precision@K5* sebanyak 16,60% menunjukkan bahwa dari 5 film yang direkomedasikan untuk user yang paling relevan sebanyak 0,83% menandakan sistem berhasil menemukan item yang relevan untuk user. jika berdasarkan metriks *Recall@K5* memiliki nilai sebanyak 100,00% menunjukkan semua film relevan berhasil ter-cover dalam 5 rekomendasi serta berhasil menemukan semua film yang penting dari daftar rekomendasi.
+untuk hasil pada film **Toy Story (1995)** memiliki *Precision@5* sebanyak 16,60% menunjukkan bahwa dari 5 film yang direkomedasikan untuk user yang paling relevan sebanyak 0,83% menandakan sistem berhasil menemukan item yang relevan untuk user. jika berdasarkan metriks *Recall@5* memiliki nilai sebanyak 100,00% menunjukkan semua film relevan berhasil ter-cover dalam 5 rekomendasi serta berhasil menemukan semua film yang penting dari daftar rekomendasi.
 
 - **Jumanji (1995)**
-  - *Precision@K5* : 2,62%
-  - *Recall@K5* : 100,00%
+  - *Precision@5* : 2,62%
+  - *Recall@5* : 100,00%
 
-untuk hasil yang didapat dari rekomendasi film yang kedua ialah bahwa nilai *Precision@K5* sebanyak 2,62% yang menandakan bahwa model tidak memberikan rekomendasi film yang secara ketat relevan diantara 5 top rekomendasi. sedangkan dari metrik *Recall@K5* memiliki nilai 100,00% yang menandakan bahwa model berhasil menangkap seluruh film yang relevan yang cocok dengan film **Jumanji (1995)** dalam *Cosine Similarity*.
+untuk hasil yang didapat dari rekomendasi film yang kedua ialah bahwa nilai *Precision@5* sebanyak 2,62% yang menandakan bahwa model tidak memberikan rekomendasi film yang secara ketat relevan diantara 5 top rekomendasi. sedangkan dari metrik *Recall@5* memiliki nilai 100,00% yang menandakan bahwa model berhasil menangkap seluruh film yang relevan yang cocok dengan film **Jumanji (1995)** dalam *Cosine Similarity*.
 
 ### 2. Collaborative Filtering
 **Metrik Evaluasi<br>**
@@ -361,7 +361,7 @@ Gambar 27. Visualisasi Hasil Evaluasi<br>
 dari gambar visualisasi hasil evaluasi yang penulis dapatkan menujukkan bahwa nilai data train terus menurun dengan bertambahnya epoch menandakan model belajar dengan baik dari data pelatihan, sedangkan pada data validation menurun dari awal tetapi stagnan bahkan sedikit naik di beberapa titik yang menandakan model mengalami indikasi overfitting dapat dilihat dari epoch ke-5 sampai epoch ke -6.<br>
  
 ### Kesimpulan 
-- **Content-Based Filtering** hampir sama dengan analisis sentimen dimana sebagai pendekatan awal namun performa dalam memberikan rekomendasi pada user terbatas karena hanya mengandalkan judul film berdasarkan fitur **genre**. hasil evaluasi model yang didapat dengan menggunakan *Precision@K5 dan Recall@K5* memberikan nilai yang akurat serta memberikan rekomendasi film yang relevan untuk pengguna. dari 2 contoh film input yang di evaluasi yaitu **``Toy Story (1995) dan Jumanji (1995)``** mendapatkan hasil sebagai berikut <br>
+- **Content-Based Filtering** hampir sama dengan analisis sentimen dimana sebagai pendekatan awal namun performa dalam memberikan rekomendasi pada user terbatas karena hanya mengandalkan judul film berdasarkan fitur **genre**. hasil evaluasi model yang didapat dengan menggunakan *Precision@5 dan Recall@5* memberikan nilai yang akurat serta memberikan rekomendasi film yang relevan untuk pengguna. dari 2 contoh film input yang di evaluasi yaitu **``Toy Story (1995) dan Jumanji (1995)``** mendapatkan hasil sebagai berikut <br>
 
 | Film               | Precision@5 | Recall@5 |
 |--------------------|-------------|----------|
