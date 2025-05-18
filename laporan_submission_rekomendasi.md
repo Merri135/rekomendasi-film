@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/071da7b7-777e-4040-b090-f693f955de82)# Laporan Proyek Machine Learning - Merri Putri Panggabean
+# Laporan Proyek Machine Learning - Merri Putri Panggabean
 
 ## Project Overview
 
