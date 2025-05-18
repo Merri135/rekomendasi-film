@@ -840,9 +840,18 @@ for movie in input_movies:
     print(f"Precision@5 for '{movie}': {precision:.2f}%")
     print(f"Recall@5 for '{movie}': {recall:.2f}%")
 
-"""**Keimpulan :**
+"""**Kesimpulan :**
 
-Pada Evaluasi dari model 1 yaitu **Content-Based-Filtering** yang dapat diketahui ialah jumlah akurasi dari model tersebut mencapai 100%, dari nilai **F-1** mencapai 100%, nilai **Precision** mencapai 100%, milai **Recall** mencapai 100%.maka model pertama mendapatkan hasil sempurna.
+Pada Evaluasi dari model **Content-Based-Filtering** yang dapat diketahui bahwa penulis melakukan 2 input film yaitu **Toy Story (1995) dan Jumanji (1995)** dengan mendapatkan nilai sebagai berikut :    
+
+- Precision@5 for ``'Toy Story (1995)'``: 16.60%
+- Recall@5 for ``'Toy Story (1995)'``: 100.00%
+- Precision@5 for ``'Jumanji (1995)'``: 2.62%
+- Recall@5 for ``'Jumanji (1995)'``: 100.00%
+
+yang menandakan bahwa pada film Toy Story (1995) memiliki Precision@5 sebanyak 16,60% menunjukkan bahwa dari 5 film yang direkomedasikan untuk user yang paling relevan sebanyak 0,83% menandakan sistem berhasil menemukan item yang relevan untuk user. jika berdasarkan metriks Recall@5 memiliki nilai sebanyak 100,00% menunjukkan semua film relevan berhasil ter-cover dalam 5 rekomendasi serta berhasil menemukan semua film yang penting dari daftar rekomendasi.
+
+sedangkan  hasil yang didapat dari rekomendasi film yang kedua ialah bahwa nilai Precision@5 sebanyak 2,62% yang menandakan bahwa model tidak memberikan rekomendasi film yang secara ketat relevan diantara 5 top rekomendasi. sedangkan dari metrik Recall@5 memiliki nilai 100,00% yang menandakan bahwa model berhasil menangkap seluruh film yang relevan yang cocok dengan film Jumanji (1995) dalam Cosine Similarity.
 
 **Evaluasi Model Collaborative-Based-Filtering**
 """
@@ -889,6 +898,8 @@ plt.show()
 """**Insight :**
 
 Dari hasil evaluasi yang didapat dari model kedua yaitu **Collaborative-Filtering**. yang dapat diketahui bahwa nilai training RMSE menunjukkan model berhasil **mempelajari pola dari data pelatihan dengan baik** sedangkan nilai validation RMSE mengalami **indikasi awal overfitting** dimana model terus membaik didata pelatihan tetapi tidak lagi membaik didata validasi.
+
+## Rekomendasi Film berdasarkan User
 """
 
 # Inisialisasi Data
